@@ -7,25 +7,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class mouseHover {
+public class mouseClick {
 
 	public static void main(String[] args) throws InterruptedException {
 		ChromeDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.flipkart.com/");
+		driver.get("https://letcode.in/selectable");
 
 		//implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-		//		driver.findElement(By.xpath("//div//span[.='✕']")).click();
-		driver.findElement(By.xpath("//span//span[.='Electronics']")).click();
-		//mouse hover
-		WebElement element=driver.findElement(By.xpath("//span[.='Electronics']"));
+		
+		//context click
+		WebElement element=driver.findElement(By.xpath("//div[.=' Playwright ']"));
 		Actions builder=new Actions(driver);
-		builder.moveToElement(element).perform();
-
-		driver.findElement(By.linkText("Samsung")).click();
-
+		builder.contextClick(element).perform();
 
 		Thread.sleep(5000);
 		driver.quit();
