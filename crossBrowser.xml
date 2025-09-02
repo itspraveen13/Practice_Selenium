@@ -9,13 +9,20 @@
 		<classes>
 			<class name="testNG.CrossBrowser" />
 		</classes>
-
 	</test> <!-- Test -->
+	
 	<test thread-count="5" parallel="classes" name="foxbrowser">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="testNG.CrossBrowser" />
 		</classes>
-
 	</test> <!-- Test -->
+	
+	<test thread-count="5" parallel="classes" name="edgebrowser">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="testNG.CrossBrowser" />
+		</classes>
+	</test> <!-- Test -->
+	
 </suite> <!-- Suite -->
