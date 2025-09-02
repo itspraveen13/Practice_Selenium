@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
@@ -26,7 +27,9 @@ public class CrossBrowser {
 		case "firefox":
 			driver = new FirefoxDriver();
 			break;
-
+		case "edge":
+			driver = new EdgeDriver();
+			break;
 		default:
 			System.err.println("Browser is not defined!");
 			break;
