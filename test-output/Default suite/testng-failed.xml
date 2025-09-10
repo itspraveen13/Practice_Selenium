@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="utils.Learn_Data_Provider">
+      <class name="pom.LoginTest">
         <methods>
-          <include name="submitForm"/>
+          <include name="setup"/>
+          <include name="testLogin" invocation-numbers="0 1"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- utils.Learn_Data_Provider -->
+      </class> <!-- pom.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
